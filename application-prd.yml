@@ -1,0 +1,14 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://nextTrucking:test123@localhost:8761/eureka/
+server:
+  port: 8764
+spring:
+  application:
+    name: NEXTTRUCKING-SPRINGCLOUD_RL
+file:
+    fileName: application-prd.yml
